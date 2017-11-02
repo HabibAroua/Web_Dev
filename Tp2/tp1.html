@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+	    <title>Formulaire</title>
+		<style>
+		    fieldset
+			{
+			    width:500px;
+			}
+		</style>
+	</head>
+	<body>
+	    <fieldset>
+	        <legend>Formulaire d'inscription</legend>
+			<form method="POST">
+		        <table>
+		            <tr>
+			            <td>Nom :</td>
+				        <td><input type="text" placeholder="saisir votre nom" /></td>
+			        </tr>
+			        <tr>
+			            <td>Prenom :</td>
+				        <td><input type="text" placeholder="saisir votre prenom" /></td>
+			        </tr>
+			        <tr>
+			            <td>Email :</td>
+				        <td><input type="email" placeholder="saisir votre email" /></td>
+			        </tr>
+			        <tr>
+			            <td>Sexe :</td>
+				        <td>Masculain <input type="radio" name="r1" />Femen <input type="radio" name="r1" /></td>
+					</tr>
+			        <tr>
+			            <td>Photo :</td>
+				        <td><input name="file" placeholder="Image" class="form-control" type="File" id="file"/></td>
+			        </tr>
+			        <tr>
+			            <td>Pays :</td>
+				        <td>
+				            <select>
+					            <option>France</option>
+						        <option>Japon</option>
+						        <option>USA</option>
+						        <option>UK</option>
+					        </select>
+				        </td>
+			        </tr>
+			        <tr>
+			            <td>Les langage préférer :</td>
+				        <td>
+				            <select name="langage" multiple> 
+                                <option value="ruby">Ruby</option>  
+                                <option value="java">Java</option>
+                                <option value="cSharp">c#</option>
+                                <option value="cPlusPlus">c++</option>
+                            </select>
+				        </td>
+			        </tr>
+			        <tr>
+			            <td>Domaine d'activté :</td>
+			            <td><input type="checkbox" />Informatique <input type="checkbox" />Gestion<input type="checkbox" />Pedagogique</td>
+			        </tr>
+		        </table>
+			</form>
+		    <input type="submit" value="Envoyer" /><input type="reset" value="Annuler" />
+	    </fieldset>
+	</body>
+</html>
