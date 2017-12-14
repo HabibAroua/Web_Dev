@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html>
+    <head>
+	    <script>
+		    function printValue(slider1 , textbox)
+			{
+			    var x=document.getElementById(textbox);
+				var y=document.getElementById(slider1);
+				x.value=y.value;
+			}
+		</script>
+	</head>
+	<body>
+	    <input id="slider1" type="range" min="100" max="500" step="10" onchange="printValue('slider1','rangeValue')" />
+        <input id="rangeValue" type="text" size="2" />		
+	</body>
+</html>
