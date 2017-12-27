@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Créer un élément</title>
+        <script type = "text/javascript">
+            function add_paragraph() 
+			{
+                var original = document.getElementById("original");
+                var new_paragraph = document.createElement("p");
+                var current_time = new Date()
+                var this_text = "Ce nouveau paragraphe est apparu à " + current_time + ".";
+                // Même une fois que le navigateur a rendu
+                // tout le HTML, il est possible d'ajouter de *nouveaux*
+                // éléments HTML. createTextNode()-
+                // appendChild()-insertBefore() est un
+                // modèle typique pour ajouter un nouveau contenu
+                // textuel.
+                var new_content = document.createTextNode(this_text);
+                new_paragraph.appendChild(new_content);
+                document.body.insertBefore(new_paragraph, original);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Créer un élément</h1>
+        <p id = "original">C'est le texte qui s'affiche lors du
+            premier chargement de l'affichage.</p>
+        <button type = "button" onclick ="add_paragraph();">Cliquez sur moi pour ajouter un nouveau contenu</button>
+        <p style = "display:none;">Avertissement :</p>
+    </body>
+</html>
