@@ -1,0 +1,12 @@
+#col1
+{
+	position: absolute;
+	bottom: 100px;
+	right: 100px;
+	background-color: lightskyblue;
+}
+
+#col2
+{
+	background-color: yellow;
+}
