@@ -1,0 +1,13 @@
+#col1
+{
+    float: left;
+	width: 150px;
+	background-color: lightskyblue;
+}
+
+#col2
+{
+	float: left;
+	width:120px;
+	background-color: yellow;
+}
