@@ -1,7 +1,8 @@
 div
 {
-    display: flexbox;
+    display: flex;
 	flex-flow: column;
+	flex-flow: column-reverse;
     height: 400px;
     padding: 1em;
     color:white;
