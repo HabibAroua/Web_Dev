@@ -6,6 +6,9 @@ person=
 };
 document.write("\n all information : "+person.name+" "+person.familyName+" "+person.age);
 
+
+
+document.write("<br><br><br>");
 var cat =new Object();
 cat.name="Tananananana";
 cat.age="1";
@@ -25,3 +28,4 @@ function myEmploye(id,name, lname,age,dept,salary)
 emp=new myEmploye(1,"Habib","Aroua",24,"Programmer",900000);
 document.write("<br>");
 document.write("all information employee : "+emp.id+" "+emp.name+" "+emp.lname+" "+emp.salary);
+//14
