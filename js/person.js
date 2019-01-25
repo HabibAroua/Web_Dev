@@ -9,6 +9,7 @@ function personInfo(id,name,lname,age)
     this.changeLnamePerson=changeLname;
     this.changeAgePerson=changeAge;
     this.showInformation=showInfo;
+    this.writeMessageByPerson=writeMessage;
     
     function changeId(params)
     {
@@ -34,4 +35,9 @@ function personInfo(id,name,lname,age)
     {
         document.write("id "+this.id," name : "+this.name+" last name : "+this.lname+" age : "+this.age+" ");
     }
-}
+    
+    function writeMessage(message)
+    {
+        document.write("Your message is : <br>"+message);
+    }
+};
