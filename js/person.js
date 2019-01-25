@@ -4,8 +4,26 @@ function personInfo(id,name,lname,age)
     this.name=name;
     this.lname=lname;
     this.age=age;
-    this.changeAgePersone=changeAge;
+    this.changeIdPerson=changeId;
+    this.changeNamePerson=changeName;
+    this.changeLnamePerson=changeLname;
+    this.changeAgePerson=changeAge;
     this.showInformation=showInfo;
+    
+    function changeId(params)
+    {
+        this.id=params;    
+    }
+    
+    function changeName(params)
+    {
+        this.name=params;
+    }
+    
+    function changeLname(params)
+    {
+        this.lname=params;
+    }
     
     function changeAge(params)
     {
