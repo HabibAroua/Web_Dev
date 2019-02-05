@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="">
+<html ng-app="" ng-init="myName='Habib' ; age='24' ">
     <head>
         
     </head>
@@ -7,5 +7,11 @@
         <script src="node_modules/angular/angular.min.js"></script>
         <input type="name" ng-model="name" />
         <p>{{name}}</p>
+        <br>
+        {{5+9-2}}
+        <br>
+        <b>Name : </b>{{myName}}
+        <br>
+        <b>Age  :</b>{{age}}
     </body>
 </html>
