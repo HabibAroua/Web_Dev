@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        
+    </head>
+    <body>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="js/main.js"></script>
+        <div ng-controller="myCtr">
+            <ul ng-repeat="name in names">
+                <li>{{name}}</li>
+            </ul>
+            <br>
+            {{degree}}
+        </div>
+    </body>
+</html>
