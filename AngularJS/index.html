@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="" ng-init="myName='Habib' ; age='24' ">
+<html ng-app="" ng-init="myName='Habib' ; age='24' ; marks=[14 , 15 , 13] ">
     <head>
         
     </head>
@@ -13,5 +13,10 @@
         <b>Name : </b>{{myName}}
         <br>
         <b>Age  :</b>{{age}}
+        <br>
+        <ul ng-repeat="mark in marks">
+            <li>{{mark}}</li>
+            
+        </ul>
     </body>
 </html>
