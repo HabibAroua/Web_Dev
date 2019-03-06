@@ -15,7 +15,14 @@
         <script type="text/babel">
             const name="Habib"
             const ele1= <p> Hello {name} {5*2} </p>;
-            ReactDOM.render(ele1,document.getElementById('app'));
+            const ele2=
+            (
+                <p className="text">
+                    <span>Span 1</span>
+                    <i>Italic</i>
+                </p>
+            );
+            ReactDOM.render(ele2,document.getElementById('app'));
         </script>
     </body>
 </html>
