@@ -13,6 +13,7 @@
     <body>
         <div id="app"></div>
         <script type="text/babel">
+            
             const name="Habib"
             const ele1= <p> Hello {name} {5*2} </p>;
             const ele2=
@@ -24,7 +25,23 @@
                 </p>
                 </b>
             );
-            ReactDOM.render(ele2,document.getElementById('app'));
+            
+            class App extends React.Component{
+                render(){
+                    return(
+                        <div className="shopping-list">
+                            <h1>Shopping List for {this.props.name}</h1>
+                            <ul>
+                                <li>Instagram</li>
+                                <li>WhatsApp</li>
+                                <li>Oculus</li>
+                            </ul>
+                        </div>
+                    );
+                }
+            }
+
+            ReactDOM.render(<App />,document.getElementById('app'));
         </script>
     </body>
 </html>
