@@ -25,14 +25,14 @@
                 </p>
                 </b>
             );
-            //Component
+            //Component is the parent and Header, Content and Footer are child
             class App extends React.Component
             {
                 render()
                 {
                     return(
                         <div>
-                            <Header />
+                            <Header title="Hello react Pops" />
                             <Content />
                             <Footer />
                         </div>
@@ -45,7 +45,7 @@
                 render()
                 {
                     return (
-                        <header>The Header</header>
+                        <header>{ this.props.title }</header>
                     );
                 }
             }
