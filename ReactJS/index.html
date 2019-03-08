@@ -26,17 +26,46 @@
                 </b>
             );
             
-            class App extends React.Component{
-                render(){
+            class App extends React.Component
+            {
+                render()
+                {
                     return(
-                        <div className="shopping-list">
-                            <h1>Shopping List for {this.props.name}</h1>
-                            <ul>
-                                <li>Instagram</li>
-                                <li>WhatsApp</li>
-                                <li>Oculus</li>
-                            </ul>
+                        <div>
+                            <Header />
+                            <Content />
+                            <Footer />
                         </div>
+                    );
+                }
+            }
+            
+            class Header extends React.Component
+            {
+                render()
+                {
+                    return (
+                        <header>The Header</header>
+                    );
+                }
+            }
+            
+            class Content extends React.Component
+            {
+                render()
+                {
+                    return(
+                        <main>The content</main>
+                    );
+                }
+            }
+            
+            class Footer extends React.Component
+            {
+                render()
+                {
+                    return(
+                        <footer>The Footer</footer>
                     );
                 }
             }
