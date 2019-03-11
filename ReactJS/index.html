@@ -46,31 +46,43 @@
             }
             class Header extends React.Component
             {
+                state =
+                {
+                    name : 'state header',
+                }
                 render()
                 {
                     return (
                     
-                        <header>{ this.props.title }</header>
+                        <header>{ this.props.title } And { this.state.name }</header>
                     );
                 }
             }
             
             class Content extends React.Component
             {
+                state=
+                {
+                    name : 'state Content',
+                }
                 render()
                 {
                     return(
-                        <main>{ this.props.name }</main>
+                        <main>{ this.props.name } And { this.state.name }</main>
                     );
                 }
             }
             
             class Footer extends React.Component
             {
+                state=
+                {
+                    name : 'state Footer',
+                }
                 render()
                 {
                     return(
-                        <footer>{ this.props.value }</footer>
+                        <footer>{ this.props.value } And { this.state.name }</footer>
                     );
                 }
             }
