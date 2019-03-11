@@ -28,23 +28,28 @@
             //Component is the parent and Header, Content and Footer are child
             class App extends React.Component
             {
+                state =
+                {
+                    name : 'App compoment',
+                }
                 render()
                 {
                     return(
                         <div>
-                            <Header title="Hello react Pops" />
-                            <Content />
-                            <Footer />
+                            <p>{this.state.name}</p>
+                            <Header  title="This is Header" />
+                            <Content name="This is a Content" />
+                            <Footer  value="This is a Footer" />
                         </div>
                     );
                 }
             }
-            
             class Header extends React.Component
             {
                 render()
                 {
                     return (
+                    
                         <header>{ this.props.title }</header>
                     );
                 }
@@ -55,7 +60,7 @@
                 render()
                 {
                     return(
-                        <main>The content</main>
+                        <main>{ this.props.name }</main>
                     );
                 }
             }
@@ -65,7 +70,7 @@
                 render()
                 {
                     return(
-                        <footer>The Footer</footer>
+                        <footer>{ this.props.value }</footer>
                     );
                 }
             }
