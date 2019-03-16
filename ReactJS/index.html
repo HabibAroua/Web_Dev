@@ -89,13 +89,19 @@
             
             class App1 extends React.Component
             {
-            
+                state=
+                {
+                    parent1 : 'class child',
+                    parent2 : 'function child1'
+                }
+                
                 render()
                 {
                     return(
                         <div>
                             Hello js from Parent Component
-                            <Child name="test of props" />
+                            <Child name={this.state.parent1} />
+                            <Child1 name={this.state.parent2} />
                         </div>
                     );
                 }
@@ -109,6 +115,13 @@
                         <p>Hello from Child Component and the props is : {this.props.name}</p>
                     );
                 }
+            }
+            
+            function Child1(props)
+            {
+                return (
+                    <p>This is the child1 and the props is {props.name}</p>
+                )
             }
 
             ReactDOM.render(<App1 />,document.getElementById('app'));
