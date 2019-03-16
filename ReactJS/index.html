@@ -89,12 +89,13 @@
             
             class App1 extends React.Component
             {
+            
                 render()
                 {
                     return(
                         <div>
                             Hello js from Parent Component
-                            <Child />
+                            <Child name="test of props" />
                         </div>
                     );
                 }
@@ -105,7 +106,7 @@
                 render()
                 {
                     return(
-                        <p>Hello from Child Component</p>
+                        <p>Hello from Child Component and the props is : {this.props.name}</p>
                     );
                 }
             }
