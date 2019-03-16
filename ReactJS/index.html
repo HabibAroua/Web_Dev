@@ -92,7 +92,17 @@
                 render()
                 {
                     return(
-                        <p>Hello js</p>
+                        <p>Hello js from Parent Component</p>
+                    );
+                }
+            }
+            
+            class Child extends React.Component
+            {
+                render()
+                {
+                    return(
+                        <p>Hello from Child Component</p>
                     );
                 }
             }
