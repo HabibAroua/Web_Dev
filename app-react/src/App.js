@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import {x} from './module'
+import {x , y} from './module'
+//import {y} from './module'
 import './App.css';
 
 class App extends Component
@@ -9,7 +10,7 @@ class App extends Component
   {
     return (
       <div className="App">
-        Hello world ! {x*2}
+        Hello world ! {x+y}
       </div>
     );
   }
