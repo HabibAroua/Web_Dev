@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import {x , y} from './module'
+import {x , y , Test} from './module'
 //import {y} from './module'
 import './App.css';
 
@@ -11,6 +11,7 @@ class App extends Component
     return (
       <div className="App">
         Hello world ! {x+y}
+        the function is { Test() }
       </div>
     );
   }
