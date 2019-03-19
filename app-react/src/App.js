@@ -63,6 +63,7 @@ class App extends Component
                 <button onClick={this.setName} >Set the name</button>
                 <p>{this.state.name}</p>
                 <Items items={this.state.items} />
+                <p>______________________________________________________________</p>
             </div>
     );
   }
