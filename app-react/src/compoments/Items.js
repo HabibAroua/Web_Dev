@@ -8,7 +8,7 @@ class Items extends Component
         const theItems = items.map( item=>
         {
            return(
-               <div>
+               <div key={item.id}>
                    <p>{item.id}</p>
                    <p>{item.name}</p>
                    <p>{item.age}</p>
