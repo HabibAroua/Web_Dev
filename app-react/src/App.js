@@ -12,7 +12,12 @@ class App extends Component
 {
     state =
     {
-        name : 'Habib'
+        name : 'Habib',
+        items: [
+            {id: '1' , name:'Habib' , age:24 },
+            {id: '2' , name:'Nada' ,age:23 },
+            {id: '3' , name:'Mounir', age:44},
+        ]
     }
     Test()
     {
@@ -57,7 +62,7 @@ class App extends Component
                 <button onMouseMove={this.hndleMouse}>Mouse Mouve</button>
                 <button onClick={this.setName} >Set the name</button>
                 <p>{this.state.name}</p>
-                <Items id="1" name="Habib"  age="24" />
+                <Items items={this.state.items} />
             </div>
     );
   }
