@@ -6,6 +6,7 @@ import {default as Testing} from  './module';
 import Child from './Child';
 //import {y} from './module'
 import './App.css';
+import Items from './compoments/Items';
 
 class App extends Component
 {
@@ -56,6 +57,7 @@ class App extends Component
                 <button onMouseMove={this.hndleMouse}>Mouse Mouve</button>
                 <button onClick={this.setName} >Set the name</button>
                 <p>{this.state.name}</p>
+                <Items id="1" name="Habib"  age="24" />
             </div>
     );
   }
