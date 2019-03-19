@@ -29,8 +29,8 @@ class App1 extends  Component
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <input type="text" onChange={this.handleChange.bind(this)}/>
                     <button>Submit</button>
-                    {this.state.name}
                 </form>
+                {this.state.name}
             </div>
         )
     }
