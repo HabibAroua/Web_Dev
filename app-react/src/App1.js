@@ -18,6 +18,7 @@ class App1 extends  Component
 
     handleSubmit=(e)=>
     {
+        e.preventDefault(e);
         console.log(this.state.name);
     }
     render()
@@ -25,7 +26,7 @@ class App1 extends  Component
         return(
             <div>
                 Form part 1
-                <form>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                     <input type="text" onChange={this.handleChange.bind(this)}/>
                     <button>Submit</button>
                     {this.state.name}
