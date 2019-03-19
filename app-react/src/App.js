@@ -9,6 +9,10 @@ import './App.css';
 
 class App extends Component
 {
+    state =
+    {
+        name : 'Habib'
+    }
     Test()
     {
         return " Hello test intern";
@@ -21,7 +25,12 @@ class App extends Component
 
     handleClick()
     {
-        alert("Hello world");
+        alert("Hello world "+this.state.name);
+    }
+
+    hndleMouse()
+    {
+        alert("on mouse "+this.state.name);
     }
     render()
     {
@@ -33,7 +42,8 @@ class App extends Component
                 <Child />
                 the result the function intern N° 1 : {this.Test()}
                 the result the function intern N° 1 : {this.Test2()}
-                <button onClick={this.handleClick}>Click here</button>
+                <button onClick={this.handleClick.bind(this)}>Click here</button>
+                <button onMouseMove={this.hndleMouse}>Mouse Mouve</button>
             </div>
     );
   }
