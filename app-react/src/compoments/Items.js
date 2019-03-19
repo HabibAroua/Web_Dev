@@ -6,7 +6,12 @@ class Items extends Component
     {
         return(
             <div>
-                Items
+                Items : values
+                <ul>
+                    <li>{this.props.id}</li>
+                    <li>{this.props.name}</li>
+                    <li>{this.props.age}</li>
+                </ul>
             </div>
         );
     }
