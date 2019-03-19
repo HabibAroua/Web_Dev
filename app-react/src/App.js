@@ -30,8 +30,18 @@ class App extends Component
 
     hndleMouse()
     {
-        alert("on mouse "+this.state.name);
+        alert("on mouse ");
     }
+
+    setName =()=>
+    {
+        this.setState(
+            {
+                name : 'Nada'
+            }
+        )
+    }
+
     render()
     {
         return (
@@ -44,6 +54,8 @@ class App extends Component
                 the result the function intern N° 1 : {this.Test2()}
                 <button onClick={this.handleClick.bind(this)}>Click here</button>
                 <button onMouseMove={this.hndleMouse}>Mouse Mouve</button>
+                <button onClick={this.setName} >Set the name</button>
+                <p>{this.state.name}</p>
             </div>
     );
   }
