@@ -6,6 +6,7 @@ class App1 extends  Component
         {
             name: ''
         }
+
     handleChange=(e)=>
     {
         this.setState(
@@ -14,13 +15,18 @@ class App1 extends  Component
             }
         )
     }
+
+    handleSubmit=(e)=>
+    {
+        console.log(this.state.name);
+    }
     render()
     {
         return(
             <div>
                 Form part 1
                 <form>
-                    <input type="text" onChange={this.handleChange}/>
+                    <input type="text" onChange={this.handleChange.bind(this)}/>
                     <button>Submit</button>
                     {this.state.name}
                 </form>
