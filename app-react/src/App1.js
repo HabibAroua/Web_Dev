@@ -2,9 +2,17 @@ import React , {Component} from 'react';
 
 class App1 extends  Component
 {
+    state=
+        {
+            name: ''
+        }
     handleChange=(e)=>
     {
-        console.log(e.target.value);
+        this.setState(
+            {
+                name : e.target.value
+            }
+        )
     }
     render()
     {
@@ -14,6 +22,7 @@ class App1 extends  Component
                 <form>
                     <input type="text" onChange={this.handleChange}/>
                     <button>Submit</button>
+                    {this.state.name}
                 </form>
             </div>
         )
