@@ -10,6 +10,22 @@ import Items from './compoments/Items';
 
 class App extends Component
 {
+    constructor()
+    {
+        super();
+        console.log("Constrctor");
+    }
+
+    componentDidMount()
+    {
+        console.log("componentDidMount");
+    }
+
+    componentDidUpdate(prevProps, prevState)
+    {
+        console.log("componentDidUpdate "+prevProps+" "+prevState);
+    }
+
     state =
     {
         name : 'Habib',
@@ -48,6 +64,22 @@ class App extends Component
         )
     }
 
+    handleAdd=(e)=>
+    {
+        let items = this.state.items;
+        items.push({id: '4' , name:'Mai', age:35});
+        this.setState( //Edit the item in this instruction
+            {
+                items : items
+            }
+        )
+    }
+
+    handleDelete=(e)=>
+    {
+
+    }
+
     render()
     {
         return (
@@ -63,6 +95,8 @@ class App extends Component
                 <button onClick={this.setName} >Set the name</button>
                 <p>{this.state.name}</p>
                 <Items items={this.state.items} />
+                <button onClick={this.handleAdd}>Add</button>
+                <button>Delete</button>
                 <p>______________________________________________________________</p>
             </div>
     );
