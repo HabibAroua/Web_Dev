@@ -3,10 +3,16 @@ import React from 'react';
 const Nav = ()=>
 {
     return(
-        <div>
-            <h2>Nav</h2>
-            <p>This is nav section</p>
+        <div className="navbar">
+            <div className="container">
+                <a className="logo" href="#">Logo</a>
+                <ul>
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                </ul>
+            </div>
         </div>
+
     )
 }
 
