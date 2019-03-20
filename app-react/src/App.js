@@ -66,11 +66,11 @@ class App extends Component
 
     handleAdd=(e)=>
     {
-        let items = this.state.items;
-        items.push({id: '4' , name:'Mai', age:35});
+        let items1 = this.state.items;
+        items1.push({id: '4' , name:'Mai', age:35});
         this.setState( //Edit the item in this instruction
             {
-                items : items
+                items : items1
             }
         )
     }
