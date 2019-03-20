@@ -77,7 +77,11 @@ class App extends Component
 
     handleDelete=(e)=>
     {
-
+        this.setState(
+            {
+                items : [{id: '3' , name:'Mounir', age:44}]
+            }
+        )
     }
 
     render()
@@ -96,7 +100,7 @@ class App extends Component
                 <p>{this.state.name}</p>
                 <Items items={this.state.items} />
                 <button onClick={this.handleAdd}>Add</button>
-                <button>Delete</button>
+                <button onClick={this.handleDelete}>Delete</button>
                 <p>______________________________________________________________</p>
             </div>
     );
