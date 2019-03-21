@@ -13,6 +13,7 @@ const Nav = ()=>
                     <NavLink activeClassName="selected" to="/blog">Blog</NavLink>
                     <NavLink activeClassName="selected" to="/blog1">Blog1</NavLink>
                     <NavLink activeClassName="selected" to="/rout">Rout</NavLink>
+                    <NavLink activeClassName="selected" to="/image">Image</NavLink>
                 </ul>
             </div>
         </div>
