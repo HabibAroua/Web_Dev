@@ -1,9 +1,11 @@
 import React , {Component} from 'react';
 import Nav from './compoments/Nav';
-import { BrowserRouter , Route } from 'react-router-dom';
+import { BrowserRouter , Route  , Switch} from 'react-router-dom';
 import Home from  './compoments/Home';
 import About from './compoments/About';
 import Blog from   './compoments/Blog';
+import Blog1 from  './compoments/Blog1';
+import Rout from './compoments/Rout';
 
 class App2 extends  Component
 {
@@ -13,9 +15,13 @@ class App2 extends  Component
             <BrowserRouter>
                 <div>
                     <Nav />
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about"  component={About} />
-                    <Route path="/blog"   component={Blog}/>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/about"  component={About} />
+                        <Route path="/blog"   component={Blog}/>
+                        <Route path="/blog1"   component={Blog1} />
+                        <Route path="/:params_test"    component={Rout} />
+                    </Switch>
                 </div>
             </BrowserRouter>
         )

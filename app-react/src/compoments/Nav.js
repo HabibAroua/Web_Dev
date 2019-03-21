@@ -11,6 +11,8 @@ const Nav = ()=>
                     <NavLink activeClassName="selected" exact to="/">Home</NavLink>
                     <NavLink activeClassName="selected" to="/about">About</NavLink>
                     <NavLink activeClassName="selected" to="/blog">Blog</NavLink>
+                    <NavLink activeClassName="selected" to="/blog1">Blog1</NavLink>
+                    <NavLink activeClassName="selected" to="/rout">Rout</NavLink>
                 </ul>
             </div>
         </div>
