@@ -13,7 +13,7 @@ class App2 extends  Component
             <BrowserRouter>
                 <div>
                     <Nav />
-                    <Route path="/" component={Home} />
+                    <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
                 </div>
             </BrowserRouter>
