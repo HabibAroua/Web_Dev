@@ -20,19 +20,19 @@ body
 
 .logo
 {
-  font-size: 25px;
-  width: 30%;
-  float:left;
-  display: block;
-  margin : 10px 0;
+  font-size  : 25px;
+  width      : 30%;
+  float      :left;
+  display    : block;
+  margin     : 10px 0;
 }
 
 ul
 {
-  width: 70%;
-  float :  left;
-  padding: 0;
-  text-align: right;
+  width      : 70%;
+  float      :  left;
+  padding    : 0;
+  text-align : right;
 }
 
 ul a
