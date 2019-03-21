@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link , NavLink} from "react-router-dom";
 
 const Nav = ()=>
 {
@@ -7,8 +8,9 @@ const Nav = ()=>
             <div className="container">
                 <a className="logo" href="#">Logo</a>
                 <ul>
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
+                    <NavLink activeClassName="selected" exact to="/">Home</NavLink>
+                    <NavLink activeClassName="selected" to="/about">About</NavLink>
+                    <NavLink activeClassName="selected" to="/blog">Blog</NavLink>
                 </ul>
             </div>
         </div>

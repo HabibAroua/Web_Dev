@@ -41,3 +41,8 @@ ul a
   color : #fff;
   margin : 0 15px;
 }
+
+.selected
+{
+  background : red;
+}
