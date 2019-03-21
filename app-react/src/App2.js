@@ -1,14 +1,22 @@
 import React , {Component} from 'react';
 import Nav from './compoments/Nav';
+import { BrowserRouter , Route } from 'react-router-dom';
+import Home from './compoments/Home';
+import About from './compoments/About';
+
 
 class App2 extends  Component
 {
     render()
     {
         return(
-            <div>
-                <Nav />
-            </div>
+            <BrowserRouter>
+                <div>
+                    <Nav />
+                    <Route path="/" component={Home} />
+                    <Route path="/about" component={About} />
+                </div>
+            </BrowserRouter>
         )
     }
 }
