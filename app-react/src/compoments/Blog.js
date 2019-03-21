@@ -6,7 +6,8 @@ class Blog extends Component
     {
         return(
             <div>
-                <h2>This is the blog</h2>
+                <h2>Blog</h2>
+                <p>This is a blog</p>
             </div>
         )
     }
