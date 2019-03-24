@@ -14,6 +14,7 @@ const Nav = ()=>
                     <NavLink activeClassName="selected" to="/blog1">Blog1</NavLink>
                     <NavLink activeClassName="selected" to="/rout">Rout</NavLink>
                     <NavLink activeClassName="selected" to="/image">Image</NavLink>
+                    <NavLink activeClassName="selected" to="/post">Post</NavLink>
                 </ul>
             </div>
         </div>
