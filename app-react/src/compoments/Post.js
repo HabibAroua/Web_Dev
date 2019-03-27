@@ -20,7 +20,7 @@ class Post extends Component
                 )
             });
     }
-
+//Post
     render()
     {
         const {getPosts}=this.state;
