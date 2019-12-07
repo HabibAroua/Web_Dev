@@ -14,7 +14,7 @@ class App extends  Component
 
     componentDidMount()
     {
-        axios.get("http://www.omdbapi.com/?apikey=b3410783&s=tunis")
+        axios.get("http://www.omdbapi.com/?apikey=b3410783&s=frozen")
             .then(res=>
             {
                 this.setState(
@@ -32,7 +32,7 @@ class App extends  Component
       const moevieList=movies.map(movie=>
       {
           return (
-              <div className={"col-4"}> <Movie title={movie.Title}/></div>
+              <div className={"col-4"}> <Movie title={movie.Title} poster={movie.Poster}/></div>
           )
       })
     return(
@@ -49,3 +49,4 @@ class App extends  Component
 }
 
 export default App;
+//Drriblere pour des templates
