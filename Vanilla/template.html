@@ -17,6 +17,16 @@
 				max-width: 40em;
 				width: 88%;
 			}
+			
+			.accordion
+			{
+				display : none;
+			}
+			
+			.accordion.active
+			{
+				display : block;
+			}
 		</style>
 	</head>
 
@@ -72,6 +82,8 @@
 						return;
 					}
 					console.log(content);
+					
+					content.classList.toggle('active');
 				},false
 			);
 		</script>
