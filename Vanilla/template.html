@@ -60,7 +60,18 @@
 				'click',
 				function(event)
 				{
-					
+					//console.log(event);
+					if(!event.target.classList.contains('accordion-toggle'))
+					{
+						return;
+					}
+					//get content area
+					var content = document.querySelector(event.target.hash);
+					if(!content)
+					{
+						return;
+					}
+					console.log(content);
 				},false
 			);
 		</script>
