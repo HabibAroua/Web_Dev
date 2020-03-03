@@ -24,6 +24,8 @@
 		</div>
 
 		<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		
+		<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 		<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
 
@@ -36,12 +38,12 @@
 			function hello()
 			{
 				var x = document.getElementById("dragtarget").value;
-				var p = document.getElementById("phrase").value;
-				alert(p);
+				alert(x);
 			}
 			
 			function dragStart(event) 
 			{
+				alert(event.target.id);
 			  event.dataTransfer.setData("Text", event.target.id);
 			  document.getElementById("demo").innerHTML = "Started to drag the p element";
 			}
