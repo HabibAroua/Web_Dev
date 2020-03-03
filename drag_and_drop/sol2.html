@@ -17,7 +17,7 @@
 	
 	<body>
 
-		<p>Drag the p element back and forth between the two rectangles:</p>
+		<p id="phrase">Drag the p element back and forth between the two rectangles:</p>
 
 		<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
 		  <input type="text" placeholder="Text" name="value" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget" />
@@ -36,7 +36,8 @@
 			function hello()
 			{
 				var x = document.getElementById("dragtarget").value;
-				alert(x);
+				var p = document.getElementById("phrase").value;
+				alert(p);
 			}
 			
 			function dragStart(event) 
