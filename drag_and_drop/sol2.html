@@ -19,13 +19,13 @@
 
 		<p id="phrase">Drag the p element back and forth between the two rectangles:</p>
 
-		<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<div id="id0" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
 		  <input type="text" placeholder="Text" name="value" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget" />
 		</div>
 
-		<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="id1" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 		
-		<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="id2" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 		<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
 
@@ -43,7 +43,6 @@
 			
 			function dragStart(event) 
 			{
-				alert(event.target.id);
 			  event.dataTransfer.setData("Text", event.target.id);
 			  document.getElementById("demo").innerHTML = "Started to drag the p element";
 			}
@@ -61,9 +60,24 @@
 
 			function drop(event) 
 			{
-			  event.preventDefault();
-			  var data = event.dataTransfer.getData("Text");
-			  event.target.appendChild(document.getElementById(data));
+				if(event.target.id =='id0')
+				{
+					alert('the main ID');
+				}
+				else
+				{
+					if(event.target.id == 'id1')
+					{
+						alert('The first ID');
+					}
+					else
+					{
+						alert('The second ID');
+					}
+				}
+				event.preventDefault();
+				var data = event.dataTransfer.getData("Text");
+				event.target.appendChild(document.getElementById(data));
 			}
 			
 		</script>
