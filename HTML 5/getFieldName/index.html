@@ -3,15 +3,17 @@
 	<head>
 	</head>
 	<body>
-		<form>
-			<input type="text" name="t1" id="t1" />
-			<input type="text" name="t2" id="t2" />
-			<button onclick="show()">Click</button>
-		</form>
+		<div>
+			<input type="text" name="t1" class="myID" id="t1" />
+			<input type="text" name="t2" class="myID" id="t2" />
+		</div>
+		<button onclick="show()">Click</button>
+		<p id="demo"></p>
 		<script>
 			function show()
 			{
-				alert('Hello world');
+				var x = document.getElementsByClassName("myID")[0].id;
+				document.getElementById("demo").innerHTML = x;
 			}
 		</script>
 	</body>
