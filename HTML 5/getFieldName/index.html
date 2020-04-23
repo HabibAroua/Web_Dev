@@ -9,8 +9,11 @@
 			<input type="text" name="t3" class="myID" id="t3" />
 			<input type="text" name="t4" class="myID" id="t4" />
 			<input type="text" name="t5" class="myID" id="t5" />
+			<br>
+			<textarea name="content" id="conetnt"></textarea>
 		</div>
 		<button onclick="getAllValue()">Click</button>
+		<button onclick="stack()">Save</button>
 		<p id="demo"></p>
 		<script>
 			function show()
@@ -33,12 +36,17 @@
 			function getAllValue()
 			{
 				var myClasses = document.getElementsByClassName("myID");
-				var x=0;
+				var ch=""
 				for (var i = 0; i < myClasses.length; i++) 
 				{
-					x++;
-					alert(myClasses[i].value+' '+x);
+					ch=ch+myClasses[i].value+"\n"
 				}
+				return ch;
+			}
+			
+			function stack()
+			{
+				alert(getAllValue());
 			}
 		</script>
 	</body>
