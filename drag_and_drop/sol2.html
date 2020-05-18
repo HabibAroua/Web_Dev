@@ -12,6 +12,11 @@
 			border: 1px solid #aaaaaa;
 		}
 		
+		.dragtarget1 :hover
+		{
+			cursor: pointer; 
+		}
+		
 		</style>
 	</head>
 
@@ -20,10 +25,18 @@
 		<p id="phrase">Drag the p element back and forth between the two rectangles:</p>
 
 		<div style="width:200px; height:500px;" id="id0" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<input type="text" draggable="true" placeholder="Text" name="value" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget" class="myID" /><br></br>
-			<input type="email" draggable="true" placeholder="Text" name="value" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget1" class="myID" /><br></br>
-			<input type="email" draggable="true" placeholder="Text" name="value" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget2" class="myID" /><br></br>
-			<input type="email" draggable="true" placeholder="Text" name="value" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget3" class="myID" /><br></br>
+			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">
+				<p>Input 1</p><input type="text" draggable="true" placeholder="Text" name="value"  class="myID" /><br></br>
+			</div>
+			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget1">
+				<p>Input 2</p><input type="email" draggable="true" placeholder="Text" name="value"  class="myID" /><br></br>
+			</div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget2">
+			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget3">
+				<p>Input 3</p><input type="email" draggable="true" placeholder="Text" name="value" class="myID" /><br></br>
+			</div>
+			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget4">
+				<p>Input 4</p><input type="email" draggable="true" placeholder="Text" name="value" class="myID" /><br></br>
+			</div>
 		</div>
 		
 		<div id="id1" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -55,7 +68,6 @@
 				document.getElementById("demo").innerHTML = "Finished dragging the p element.";
 				//document.getElementById('dragtarget').value="Habib";
 				document.getElementById("id1").innerHTML += "<br></br>";
-
 			}
 
 			function allowDrop(event)
