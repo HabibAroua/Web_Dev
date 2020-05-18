@@ -12,10 +12,6 @@
 			border: 1px solid #aaaaaa;
 		}
 		
-		.dragtarget1 :hover
-		{
-			cursor: pointer; 
-		}
 		
 		</style>
 	</head>
@@ -24,8 +20,8 @@
 
 		<p id="phrase">Drag the p element back and forth between the two rectangles:</p>
 
-		<div style="width:200px; height:500px;" id="id0" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">
+		<div  style="width:200px; height:500px;" id="id0" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div onclick="Change();" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">
 				<p>Input 1</p><input type="text" draggable="true" placeholder="Text" name="value"  class="myID" /><br></br>
 			</div>
 			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget1">
@@ -115,6 +111,14 @@
 			{
 				alert(getAllValue());
 			}
+			
+			//event for element to move
+			function Change() 
+			{	 
+				// style.cursor specifies the mouse cursor to be displayed 
+				// when pointing over an element. 
+				document.getElementById("dragtarget1").style.cursor = "pointer"; 
+			} 
 
 		</script>
 	</body>
