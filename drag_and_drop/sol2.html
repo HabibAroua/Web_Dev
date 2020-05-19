@@ -36,10 +36,11 @@
 		</div>
 		
 		<div id="id1" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<!--<form> -->
+			<form method="GET">
 				<textarea id=content></textarea>
-				<button onclick="stack()">Click</button>
-			<!--</form> -->
+				<button >Confirm</button>
+			</form>
+			<button onclick="stack()">Save</button>
 		</div>
 <!--
 		<div id="id2" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -116,6 +117,7 @@
 			function stack()
 			{
 				document.getElementById("content").value = getAllValue();
+				alert("Stack");
 				//alert(x);
 			}
 			
