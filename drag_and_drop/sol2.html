@@ -21,29 +21,35 @@
 		<p id="phrase">Drag the p element back and forth between the two rectangles:</p>
 
 		<div  style="width:200px; height:500px;" id="id0" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<div onclick="Change();" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">
+			<div onmousemove="Change();" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">
 				<p>Input 1</p><input type="text" draggable="true" placeholder="Text" name="value"  class="myID" /><br></br>
 			</div>
-			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget1">
+			<div onmousemove="Change1();" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget1">
 				<p>Input 2</p><input type="email" draggable="true" placeholder="Text" name="value"  class="myID" /><br></br>
-			</div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget2">
-			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget3">
+			</div onmouseleave="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget2">
+			<div onmousemove="Change2();" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget2">
 				<p>Input 3</p><input type="email" draggable="true" placeholder="Text" name="value" class="myID" /><br></br>
 			</div>
-			<div ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget4">
+			<div onmousemove="Change3();" ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget3">
 				<p>Input 4</p><input type="email" draggable="true" placeholder="Text" name="value" class="myID" /><br></br>
 			</div>
 		</div>
 		
-		<div id="id1" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="id1" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<!--<form> -->
+				<textarea id=content></textarea>
+				<button onclick="stack()">Click</button>
+			<!--</form> -->
+		</div>
 <!--
 		<div id="id2" class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 -->
-		<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
+		<!--<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
 
-		<p id="demo"></p>
+		<p id="demo"></p> -->
 
-		<button onclick="stack()">Click</button>
+		
+		
 
 		<script>
 
@@ -109,7 +115,8 @@
 
 			function stack()
 			{
-				alert(getAllValue());
+				document.getElementById("content").value = getAllValue();
+				//alert(x);
 			}
 			
 			//event for element to move
@@ -117,8 +124,36 @@
 			{	 
 				// style.cursor specifies the mouse cursor to be displayed 
 				// when pointing over an element. 
+				document.getElementById("dragtarget").style.cursor = "pointer"; 
+			}
+
+			function Change1() 
+			{	 
+				// style.cursor specifies the mouse cursor to be displayed 
+				// when pointing over an element. 
 				document.getElementById("dragtarget1").style.cursor = "pointer"; 
-			} 
+			}
+			
+			function Change2() 
+			{	 
+				// style.cursor specifies the mouse cursor to be displayed 
+				// when pointing over an element. 
+				document.getElementById("dragtarget2").style.cursor = "pointer"; 
+			}
+			
+			function Change3() 
+			{	 
+				// style.cursor specifies the mouse cursor to be displayed 
+				// when pointing over an element. 
+				document.getElementById("dragtarget3").style.cursor = "pointer"; 
+			}
+			
+			function Change4() 
+			{	 
+				// style.cursor specifies the mouse cursor to be displayed 
+				// when pointing over an element. 
+				document.getElementById("dragtarget4").style.cursor = "pointer"; 
+			}
 
 		</script>
 	</body>
