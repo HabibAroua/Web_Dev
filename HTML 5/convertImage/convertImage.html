@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+        <script>
+            function previewFile(id,file,im)
+            {
+                var preview = document.getElementById(im);
+                //var file    = document.querySelector('input[type=file]').files[0];
+                var file = document.getElementById(file).files[0];
+                //alert(file);
+                console.log(file);
+                var reader  = new FileReader();
+                //reader listener
+                let ch="";
+                reader.addEventListener
+                (
+                    "load", function ()
+                    {
+                        preview.src = reader.result;
+                        console.log(preview.src);
+                        ch=preview.src;
+                        document.getElementById(id).value ="<img src='"+ch+"' />";
+                    }, false
+                );
+                if (file)
+                {
+                    reader.readAsDataURL(file);
+                    //alert(file.name);
+                    //console.log(file);
+                    //alert(preview.src);
+                    alert("the last "+ch);
+                }
+                //alert(ch);
+                //console.log(ch);
+            }
+            function save()
+            {
+                alert(document.getElementById('t').value);
+            }
+        </script>
+        <br>
+        <input type="file" id="myfile" onchange="previewFile('t','myfile','im1')">
+        <img src="" height="200" id="im1" alt="Aperçu de l’image..."> 
+        <textarea id="t"></textarea>
+        <br>
+        <!-- -->
+        
+         <input type="file" id="myfile1" onchange="previewFile('t1','myfile1','im2')">
+        <img src="" id="im2" height="200" alt="Aperçu de l’image...">
+        <textarea id="t1"></textarea>
+        <br>
+    </body>
+</html>
