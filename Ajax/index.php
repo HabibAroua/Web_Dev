@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.ajax({url: "demo_test.txt", success: function(result){
-      $("#div1").html(result);
-    }});
-  });
-});
-</script>
-</head>
-<body>
-
-<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
-
-<button>Get External Content</button>
-
-</body>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Poster en Ajax</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="jquery.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h2>Ajax</h2>
+		<form method="POST" class="formulaire">
+			<div class="return"></div>
+			<input type="text" placeholder="Votre nom" class="nom"><br>
+			<textarea placeholder="Votre message"></textarea><br>
+			<input type="submit" class="submit" value="Envoyer ...">
+		</form>
+		<div class="afficher"></div>
+	</body>
 </html>
+<!-- https://www.youtube.com/watch?v=bTLB-FA_duE -->
